@@ -10,7 +10,7 @@
 
 // ——— Configuration ———
 // Replace with your free API key from https://www.cricapi.com/
-const CRICAPI_KEY = "YOUR_API_KEY_HERE";
+
 
 const CRICAPI_URL = "https://api.cricapi.com/v1/currentMatches";
 
@@ -100,8 +100,11 @@ async function fetchIplMatch() {
   }
 
   const matches = json.data || [];
-  const iplMatch = findIplMatch(matches);
+  console.log(json);
+  console.log(matches);
+  
 
+  const iplMatch = findIplMatch(matches) || matches[0];
   if (!iplMatch) {
     showMessage("No live IPL match right now. Showing latest IPL fixture.", "info");
     const anyIpl = matches.find((m) => isIplMatch(m));

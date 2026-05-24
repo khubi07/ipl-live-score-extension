@@ -1,0 +1,1 @@
+const CRICAPI_KEY = "paste_your_key_here";
