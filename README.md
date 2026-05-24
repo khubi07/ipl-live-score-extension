@@ -198,14 +198,9 @@ That is your IPL update."
 
 # 📸 Screenshots
 
-> Add screens![Extension](screenshots/screenshot.png)hots here for better judging impact.
+> Add screens![Extension](screenshots/Screenshot.png)hots here for better judging impact.
 
-Example:
-- Extension popup
-- Live score UI
-- Voice commentary feature
 
----
 
 # 🌟 Why This Project Stands Out
 
