@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IPL Live Score</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="header">
+        <h1 class="title">IPL Live Score</h1>
+        <p class="subtitle">Indian Premier League</p>
+      </header>
+
+      <main class="main">
+        <!-- Loading state -->
+        <div id="loading" class="loading" hidden>
+          <span class="spinner"></span>
+          <span>Fetching live score…</span>
+        </div>
+
+        <!-- Error or info message -->
+        <p id="message" class="message" hidden></p>
+
+        <!-- Match score card -->
+        <section id="score-card" class="score-card" hidden>
+          <p id="match-name" class="match-name"></p>
+          <p id="match-status" class="match-status"></p>
+          <p id="venue" class="venue"></p>
+
+          <div id="scores" class="scores"></div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <button type="button" id="refresh-btn" class="btn btn-secondary">
+          Refresh
+        </button>
+        <button type="button" id="speak-btn" class="btn btn-primary" disabled>
+          Speak Commentary
+        </button>
+      </footer>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

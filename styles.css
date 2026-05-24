@@ -1,0 +1,211 @@
+/* Popup size — Chrome extension popups use body width */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 350px;
+  min-height: 320px;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  background: #0f1419;
+  color: #e8eaed;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 320px;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #2d3748;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #ff6b35, #f7c948);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  margin: 4px 0 0;
+  font-size: 0.8rem;
+  color: #9aa0a6;
+}
+
+.main {
+  flex: 1;
+}
+
+/* Loading spinner */
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 24px;
+  color: #9aa0a6;
+  font-size: 0.9rem;
+}
+
+.loading[hidden],
+.message[hidden],
+.score-card[hidden] {
+  display: none !important;
+}
+
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #2d3748;
+  border-top-color: #ff6b35;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Messages */
+.message {
+  margin: 0 0 12px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.message.info {
+  background: #1a2332;
+  border: 1px solid #3d5a80;
+  color: #a8c7fa;
+}
+
+.message.error {
+  background: #2d1f1f;
+  border: 1px solid #8b3a3a;
+  color: #f28b82;
+}
+
+/* Score card */
+.score-card {
+  background: linear-gradient(145deg, #1a2332 0%, #151b24 100%);
+  border: 1px solid #2d3748;
+  border-radius: 12px;
+  padding: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+.match-name {
+  margin: 0 0 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.match-status {
+  margin: 0 0 4px;
+  font-size: 0.85rem;
+  color: #4ade80;
+  font-weight: 500;
+}
+
+.match-status.not-live {
+  color: #f7c948;
+}
+
+.venue {
+  margin: 0 0 12px;
+  font-size: 0.75rem;
+  color: #9aa0a6;
+}
+
+.scores {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.score-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  background: #0f1419;
+  border-radius: 8px;
+  border-left: 3px solid #ff6b35;
+}
+
+.score-team {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.score-detail {
+  font-size: 0.95rem;
+  color: #f7c948;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Footer buttons */
+.footer {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid #2d3748;
+}
+
+.btn {
+  flex: 1;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #ff6b35, #e85d04);
+  color: #fff;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: linear-gradient(135deg, #ff7f50, #ff6b35);
+}
+
+.btn-secondary {
+  background: #2d3748;
+  color: #e8eaed;
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background: #3d4a5c;
+}

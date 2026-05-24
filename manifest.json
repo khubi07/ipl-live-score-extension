@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "IPL Live Score",
+  "version": "1.0.0",
+  "description": "View IPL live scores and hear match commentary with text-to-speech.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "IPL Live Score"
+  },
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://api.cricapi.com/*"
+  ]
+}
